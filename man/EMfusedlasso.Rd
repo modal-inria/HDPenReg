@@ -4,9 +4,19 @@
 \alias{EMfusedlasso}
 \title{EM algorithm for fused-lasso penalty}
 \usage{
-EMfusedlasso(X, y, lambda1, lambda2, maxSteps = 1000, burn = 50,
-  intercept = TRUE, model = c("linear", "logistic"), eps = 1e-05,
-  eps0 = 1e-08, epsCG = 1e-08)
+EMfusedlasso(
+  X,
+  y,
+  lambda1,
+  lambda2,
+  maxSteps = 1000,
+  burn = 50,
+  intercept = TRUE,
+  model = c("linear", "logistic"),
+  eps = 1e-05,
+  eps0 = 1e-08,
+  epsCG = 1e-08
+)
 }
 \arguments{
 \item{X}{the matrix (of size n*p) of the covariates.}
@@ -45,9 +55,8 @@ A list containing :
 EM algorithm for fused-lasso penalty
 }
 \examples{
-dataset <- simul(50, 100, 0.4, 1, 10, matrix(c(0.1,0.9,0.02,0.02), nrow = 2))
+dataset <- simul(50, 100, 0.4, 1, 10, matrix(c(0.1, 0.9, 0.02, 0.02), nrow = 2))
 result <- EMfusedlasso(dataset$data, dataset$response, 1, 1)
-
 }
 \seealso{
 \code{\link{EMcvfusedlasso}}

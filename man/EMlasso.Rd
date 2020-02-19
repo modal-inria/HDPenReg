@@ -4,9 +4,18 @@
 \alias{EMlasso}
 \title{EM algorithm for lasso penalty}
 \usage{
-EMlasso(X, y, lambda, maxSteps = 1000, intercept = TRUE,
-  model = c("linear", "logistic"), burn = 50, threshold = 1e-08,
-  eps = 1e-05, epsCG = 1e-08)
+EMlasso(
+  X,
+  y,
+  lambda,
+  maxSteps = 1000,
+  intercept = TRUE,
+  model = c("linear", "logistic"),
+  burn = 50,
+  threshold = 1e-08,
+  eps = 1e-05,
+  epsCG = 1e-08
+)
 }
 \arguments{
 \item{X}{the matrix (of size n*p) of the covariates.}
@@ -43,11 +52,10 @@ A list containing :
 EM algorithm for lasso penalty
 }
 \examples{
-dataset <- simul(50, 100, 0.4, 1, 10, matrix(c(0.1,0.9,0.02,0.02), nrow = 2))
+dataset <- simul(50, 100, 0.4, 1, 10, matrix(c(0.1, 0.9, 0.02, 0.02), nrow = 2))
 result <- EMlasso(dataset$data, dataset$response)
 # Obtain estimated coefficient in matrix format
 coefficient <- listToMatrix(result)
-
 }
 \seealso{
 \code{\link{EMcvlasso}}

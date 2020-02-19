@@ -24,11 +24,10 @@ The main function is \link{HDlars}.
 }
 \examples{
 \dontrun{
-#see vignette
+# see vignette
 vignette("HDPenReg")
 }
 
- 
 }
 \seealso{
 \code{\link{HDlars}} \code{\link{HDcvlars}}

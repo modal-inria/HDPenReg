@@ -6,8 +6,13 @@
 \alias{plot,LarsPath-method}
 \title{plot methods for LarsPath object}
 \usage{
-\S4method{plot}{LarsPath}(x, sep.line = FALSE, abscissa = c("l1norm",
-  "lambda"), log.scale = FALSE, ...)
+\S4method{plot}{LarsPath}(
+  x,
+  sep.line = FALSE,
+  abscissa = c("l1norm", "lambda"),
+  log.scale = FALSE,
+  ...
+)
 }
 \arguments{
 \item{x}{LarsPath object}

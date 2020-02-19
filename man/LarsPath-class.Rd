@@ -19,9 +19,9 @@ This class stores the results of lars and fusion algorithms.
   \item{addIndex}{Vector of length "step" containing the index of the added variable at the i-th step, 0 means no variable has been added at this step.}
   \item{mu}{Intercept.}
   \item{meanX}{Mean of columns of X.}
- \item{ignored}{A vector containing index of ignored variables during the algorithm.}
+	 \item{ignored}{A vector containing index of ignored variables during the algorithm.}
   \item{p}{Total number of covariates.}
- \item{fusion}{If TRUE,  results from HDfusion function.}
+	 \item{fusion}{If TRUE,  results from HDfusion function.}
   \item{error}{Error message from lars.}
 }
 }

@@ -4,9 +4,17 @@
 \alias{HDcvlars}
 \title{cross validation}
 \usage{
-HDcvlars(X, y, nbFolds = 10, index = seq(0, 1, by = 0.01),
-  mode = c("fraction", "lambda"), maxSteps = 3 * min(dim(X)),
-  partition = NULL, intercept = TRUE, eps = .Machine$double.eps^0.5)
+HDcvlars(
+  X,
+  y,
+  nbFolds = 10,
+  index = seq(0, 1, by = 0.01),
+  mode = c("fraction", "lambda"),
+  maxSteps = 3 * min(dim(X)),
+  partition = NULL,
+  intercept = TRUE,
+  eps = .Machine$double.eps^0.5
+)
 }
 \arguments{
 \item{X}{the matrix (of size n*p) of the covariates.}
@@ -15,7 +23,7 @@ HDcvlars(X, y, nbFolds = 10, index = seq(0, 1, by = 0.01),
 
 \item{nbFolds}{the number of folds for the cross-validation.}
 
-\item{index}{Values at which prediction error should be computed. When mode = "fraction", this is the fraction of the saturated |beta|. 
+\item{index}{Values at which prediction error should be computed. When mode = "fraction", this is the fraction of the saturated |beta|.
 The default value is seq(0,1,by=0.01). When mode="lambda", this is values of lambda.}
 
 \item{mode}{Either "fraction" or "lambda". Type of values containing in partition.}
@@ -29,7 +37,7 @@ The default value is seq(0,1,by=0.01). When mode="lambda", this is values of lam
 \item{eps}{Tolerance of the algorithm.}
 }
 \value{
-A list containing 
+A list containing
 \describe{
   \item{cv}{Mean prediction error for each value of index.}
   \item{cvError}{Standard error of cv.}
@@ -43,9 +51,8 @@ A list containing
 cross validation function for lars algorithm
 }
 \examples{
-dataset <- simul(50, 10000, 0.4, 10, 50, matrix(c(0.1,0.8,0.02,0.02), nrow =2 ))
+dataset <- simul(50, 10000, 0.4, 10, 50, matrix(c(0.1, 0.8, 0.02, 0.02), nrow = 2))
 result <- HDcvlars(dataset$data, dataset$response, 5)
-
 }
 \author{
 Quentin Grimonprez

@@ -4,8 +4,13 @@
 \alias{HDlars}
 \title{Lars algorithm}
 \usage{
-HDlars(X, y, maxSteps = 3 * min(dim(X)), intercept = TRUE,
-  eps = .Machine$double.eps^0.5)
+HDlars(
+  X,
+  y,
+  maxSteps = 3 * min(dim(X)),
+  intercept = TRUE,
+  eps = .Machine$double.eps^0.5
+)
 }
 \arguments{
 \item{X}{the matrix (of size n*p) of the covariates.}
@@ -22,20 +27,19 @@ HDlars(X, y, maxSteps = 3 * min(dim(X)), intercept = TRUE,
 An object of type \code{\link{LarsPath}}.
 }
 \description{
-It performs the lars algorithm for solving lasso problem. 
+It performs the lars algorithm for solving lasso problem.
 It is a linear regression problem with a l1-penalty on the estimated coefficient.
 }
 \details{
-The l1 penalty performs variable selection via shrinkage of the estimated coefficient. 
+The l1 penalty performs variable selection via shrinkage of the estimated coefficient.
 It depends on a penalty parameter called lambda controlling the amount of regularization.
 The objective function of lasso is : \deqn{||y-X\beta||_2 + \lambda||\beta||_1}
 }
 \examples{
-dataset <- simul(50, 10000, 0.4, 10, 50, matrix(c(0.1,0.8,0.02,0.02), nrow = 2))
+dataset <- simul(50, 10000, 0.4, 10, 50, matrix(c(0.1, 0.8, 0.02, 0.02), nrow = 2))
 result <- HDlars(dataset$data, dataset$response)
 # Obtain estimated coefficient in matrix format
 coefficient <- listToMatrix(result)
-
 }
 \references{
 Efron, Hastie, Johnstone and Tibshirani (2003) "Least Angle Regression" (with discussion) Annals of Statistics
