@@ -13,13 +13,13 @@ Algorithms for lasso and fused-lasso problems: implementation of the lars algori
 ## Installation
 
 From github:
-```
+``` r
 library(devtools)
 install_github("modal-inria/HDPenReg")
 ```
 
 From CRAN:
-```
+``` r
 install.packages("HDPenReg", repos = "https://cran.rstudio.com")
 ```
 
