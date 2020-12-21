@@ -1,6 +1,6 @@
 # HDPenReg
 
-[![Travis build status](https://travis-ci.com/modal-inria/HDPenReg.svg?branch=master)](https://travis-ci.com/modal-inria/HDPenReg) [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/modal-inria/HDPenReg?branch=master&svg=true)](https://ci.appveyor.com/project/modal-inria/HDPenReg)
+[![R-CMD-check](https://github.com/modal-inria/HDPenReg/workflows/R-CMD-check/badge.svg)](https://github.com/modal-inria/HDPenReg/actions)
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/HDPenReg)](https://cran.r-project.org/package=HDPenReg) [![Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/HDPenReg?color=blue)](http://cranlogs.r-pkg.org/badges/grand-total/HDPenReg) [![Downloads](https://cranlogs.r-pkg.org/badges/HDPenReg)](https://cran.rstudio.com/web/packages/HDPenReg/index.html)
 
