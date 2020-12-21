@@ -41,6 +41,9 @@ jobs:
 
       - uses: r-lib/actions/setup-pandoc@v1
 
+      - name: Install TeX package
+        run: tlmgr install amsthm
+        
       - name: Query dependencies
         run: |
           install.packages('remotes')
