@@ -44,7 +44,7 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v1
 
       - name: Install TeX package
-        run: tlmgr install amsmath amscls ae babel-english
+        run: tlmgr install amsmath amscls ae babel-english grfext
         
       - name: Query dependencies
         run: |
