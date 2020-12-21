@@ -44,7 +44,7 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v1
 
       - name: Install TeX package
-        run: tlmgr install amsthm
+        run: tlmgr install amsmath
         
       - name: Query dependencies
         run: |
